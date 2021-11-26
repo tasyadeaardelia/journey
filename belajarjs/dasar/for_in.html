@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+        // perulangan yang digunakan untuk mengiterasi seluruh data property  di object atau index di array
+        // biasanya sih for in  ini digunakan untuk perulangan pada object, jarang pada array
+
+        const person = {
+            firstName: "Tasya",
+            middleName: "Dea Ardelia",
+            lastName: "Tambunan",
+        };
+
+        for (const property in person) {
+            document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
+        }
+        // output :
+        // Property firstName : Tasya
+        // Property middleName : Dea Ardelia
+        // Property lastName : Tambunan
+
+        // ${property} akan mengambil nama property di dalam object
+        // ${person[property]} akan mengambil value dari setiap property di dalam object
+
+
+        // For in di array
+        const names = ["Tasya", "Dea Ardelia", "Tambunan"];
+
+        for (const index in names) {
+            document.writeln(`<p>Index ${index} : ${names[index]}</p>`);
+        }
+    </script>
+</body>
+</html>

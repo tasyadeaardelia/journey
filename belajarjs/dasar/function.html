@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // membuat function 
+        function sayHello() {
+            document.writeln("<p>Hello</p>");
+        }
+
+        // memanggil function
+        sayHello();
+
+        // Output: 
+        // Hello
+
+        // kita bisa juga mengirimkan suatu parameter ke dalam function
+        function sayHello(name) {
+            document.writeln(`<p>Hello ${name}</p>`);
+        }
+
+        sayHello("Tasya");
+        // output :
+        // Hello Tasya
+
+        // Rest Parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyaknya pada satu parameter
+        // dan secara otomatis akan dikonversi menjadi array
+
+        // Rest parameter hanya boleh ada satu di function
+        // Rest parameter hanya boleh berada di posisi paling akhir, tidak boleh di depan atau di tengah
+        
+        function sum(name, ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            console.info(`Total ${name} is ${total}`);
+        }
+
+        sum('Orange', 2, 3, 4, 5, 6, 7, 8);
+
+        // Output :
+        // Total Orange is 35
+
+
+        // kadang kita terlanjur memiliki data berupa array
+        // tapi untungnya kita bisa juga mengirim array ke rest parameter
+        // bisa gunakan ... diikuti dengan arary nya ketika memanggil function
+        // fitur ini dinamakan spread syntax
+
+        sum('Apple', ...[2,3,4,5]);
+        // Output:
+        // Total Apple is 14
+        
+    </script>
+</body>
+</html>

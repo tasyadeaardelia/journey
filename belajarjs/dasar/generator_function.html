@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function generator untuk membuat data generator
+
+        // data generator itu bisa di iterasi
+
+        function *createNames() {
+            yield "Tasya";
+            yield "Dea";
+            yield "Ardelia";
+        }
+
+        const names = createNames();
+        for (const name of names) {
+            console.log(name);
+        }
+
+        function *buatGanjil(value) {
+            for (let i = 1; i<= value; i++) {
+                if (i % 2 === 1) {
+                    yield i;
+                }
+            }
+        }
+
+        const angkaGanjil = buatGanjil(100);
+        for (const angka of angkaGanjil) {
+            console.info(angka);
+        }
+
+        // data generator bisa diiterasikan, gak bisa dari index
+        // generator sifatnya lazy
+
+
+        // lazy generator
+
+        function *buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if(i % 2 === 1) {
+                    console.info(`Perulangan ke ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        const angka = buatGanjil(100);
+        console.info(angkaGanjil.next().value);
+        console.info(angkaGanjil.next().value);
+        console.info(angkaGanjil.next().value);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsy and Truthy</title>
+</head>
+<body>
+    <script>
+        // Jadi kalau falsy itu data yang valuenya dianggap dalam konteks booelan itu false.
+        // Data falsy itu kalau misalnya :
+        // false    -> Boolean false
+        // 0, -0    -> Number 0 dan -0 dianggap false
+        // "", ''   -> String kosong dianggap false
+        // null,    -> null juga dianggap false
+        // undefined    -> dianggap false
+        // NaN      -> dianggap false
+
+        // Nah kalau yang truthy itu kebalikan dari falsy. Intinya truthy itu data yang bukan bernilai falsy.
+
+        let data = "";
+
+        if (data) {
+            alert("TRUE");
+        } else {
+            alert("FALSE");
+        }
+
+        // output : FALSE. karena variabel data itu menampung string kosong, kecuali ada isi string nya
+        // akan menghasilkan TRUE.
+
+    </script>
+</body>
+</html>

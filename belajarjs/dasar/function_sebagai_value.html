@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function bisa juga disimpan di dalam suatu variable
+
+        function sayHello(name){
+            console.info(`Helo ${name}`);
+        }
+
+        let say = sayHello;
+        sayHello("Budi");
+        say("Budi");
+
+        // Output :
+        // Budi
+        // Budi
+
+
+        // Function di Parameter
+
+        let say = sayHello();
+        function giveMeName(callback) {
+            callback("Eko");
+        }
+
+        giveMeName(sayHello);
+        giveMeName(say);
+
+        //Output :
+        // Hello Eko
+        // Hello Eko
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // di javascript itu ada dua jenis scope
+        // global scope dan local scope
+        // global scope bisa diakses dari local scope
+        // tapi data di local scope itu hanya bisa diakses di local scope tersebut atau
+        // local scope dibawahnya.
+
+        let counter = 0; // global scope
+
+        function hitMe(){
+            // local scope function hitMe
+            counter++;
+        }
+        hitMe();
+        hitMe();
+
+        console.info(counter);
+
+        function first(){
+            let firstVariable = "First";
+        }
+
+        function second() {
+            let secondVariable = "Second";
+        }
+
+        first();
+        second();
+
+        console.info(firstVariable); // can not access local scope
+
+        // Ya karena firstVariable ini adalah local scope jadi gak bisa diakses diluar function tersebut
+
+
+        // Nested function scope
+
+        function first() {
+            let firstVariable = "First";
+
+            function second(){
+                console.info(firstVariable); // can access local scope firstvariable
+            }
+
+            second();
+        }
+
+        first();
+
+        // Sama juga karena kan si firstVariable itu local scope milik function first
+        // jadi gak bisa kita akses di luar function first
+        // kan kita panggil nya firstVariable itu di dalam function second
+
+            
+    </script>
+</body>
+</html>
