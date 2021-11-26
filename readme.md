@@ -1,0 +1,1 @@
+Hello everyone, this is my journey learning about programming language.
