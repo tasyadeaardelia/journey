@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // di dalam constructor, kita bisa memanggil constructor lain dengan begitu kita mewarisi 
+        // semua property yang dibuat di constructor lain tersebut
+        // panggil nya dengan namaconstructor.call(this, parameter)
+
+        function Employee(firstName) {
+            this.firstName = firstName;
+            this.sayHello = function (name) {
+                console.info(`Hi ${name}, my name is ${this.firstName}`)
+            }
+        }
+
+        function Manager(firstName, lastName) {
+            Employee.call(this, firstName)
+            this.lastName = lastName;
+        }
+    </script>
+</body>
+</html>

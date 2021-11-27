@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <script>
+        // sejak EcmaScript 6, diperkenalkan kata kunci baru untuk membuat class
+        // Jadi gak perlu pakai constructor function lagi untuk membuat class
+        // kita hanya perlu pakai kata kunci class aja
+
+        // untuk membuat constructor di class bisa pakai kata kunci constructor
+
+        class Person {
+            constructor(name) {
+                // bisa menambahkan property dengan penggunaan this
+                this.name = name
+            }
+            // method di class
+            sayHello(name) {
+                console.info(`Hi ${name}, my name is ${this.name}`)
+            }
+        }
+
+        const tasya = new Person("Tasya");
+        console.info(tasya.name);
+
+        
+    </script>
+</body>
+</html>

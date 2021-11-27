@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // di class, kita juga bisa melakukan pewarisan dari class lainnya dengan menggunakan 
+        // kata kunci extends
+
+        class Employee {
+            
+            sayHello(name) {
+                console.info(`Hi ${name}, my name is ${this.name}`)
+            }
+
+
+        }
+
+        class Manager extends Employee{
+            sayHello(name) {
+                console.info(`Hi ${name}, my name is manager ${this.name}`)
+            }
+        }
+
+        const tasya = new Employee();
+        tasya.name = "Tasya"
+        tasya.sayHello("Dea")
+
+
+        const ardelia = new Manager();
+        ardelia.name = "Ardelia"
+        ardelia.sayHello("Dea")
+    </script>
+</body>
+</html>

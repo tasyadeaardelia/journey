@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Untuk membuat class pada Javascript lama, kita bisa membuat function
+        // function ini disebut sebagai constructor function
+        // Biasanya constructor function di awali dengan huruf besar.
+
+        // Untuk membuat property di dalam sebuah object bisa gunakan kata kunci this.
+
+        // Method di constructor function. Jika kita tambahkan method di constructor function
+        // secara otomatis object yang dibuat akan memiliki method tersebut
+
+        // Parameter di constructor function.
+        // constructor function sama seperti function biasanya, bisa memiliki parameter, hal ini membuat
+        // ketika kita membuat object, kita bisa langsung mengirim data lewat parameter di constructor function
+
+
+        function Person(firstName, lastName) {
+            this.firstName = ""
+            this.lastName = ""
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName}`)
+            }
+        }
+
+        const tasya = new Person();
+        const dea = new Person();
+    </script>
+</body>
+</html>
