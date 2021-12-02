@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        // Map merupakan representasi dari struktur data key-value
+        // Map secara default nya gak bisa dikonversi ke object
+
+
+        const map = new Map();
+        map.set("Name", "Tasya Dea Ardelia");
+        map.set("Address", "Indonesia");
+
+        console.info(map);
+        console.info(map.get("Name"));
+        console.info(map.get("Address"));
+
+        for (const element of map) {
+            console.info(`${element[0]} : ${element[1]}`);
+        }
+    </script>
+</body>
+</html>

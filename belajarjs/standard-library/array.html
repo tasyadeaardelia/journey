@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        const array = ["Tasya", "Dea", "Ardelia"];
+
+        array.forEach(function (value, index){
+            console.info(`${index} : ${value}`);
+        })
+
+        array.forEach((value, index) => console.info(`${index} : ${value}`));
+
+        array.forEach(value => console.info(value));
+
+
+        // Struktur data Queue (Antrian)
+        // Data yang masuk akan diposisikan di urutan belakang
+        // Data keluar di urutan paling depan
+        // FIFO (First in First Out)
+        // Bisa pakai array dengan bantuan function push() untuk menambah data dibelakang
+        // dan shift() untuk mengambil dan menghapus data paling depan
+
+        const queue = [];
+
+        queue.push("Peer");
+        queue.push("Mangga");
+        queue.push("Anggur")
+
+        console.info(queue.shift());
+        console.info(queue.shift());
+        console.info(queue.shift());
+
+        // Struktur data Stack (tumpuan) kebalikan dari queue, dimana aturan nya mirip dengan tumpukan kartu
+        // sifatnya itu LIFO (Last in First Out)
+        // untuk menambah di urutan belakang, kita bisa menggunakan function push()
+        // untuk mengambil dan menghapus paling belakang, kita bisa menggunakan function pop()
+
+        const stack = [];
+        stack.push("Peer");
+        stack.push("Mangga");
+        stack.push("Anggur");
+
+        console.info(stack.pop());
+        console.info(stack.pop());
+        console.info(stack.pop());
+
+
+        // Array search
+        // find (value => boolean) : value ------> mencari data sesuai dengan kondisi
+        // findIndex (value => boolean) : number -----> mencari data index sesuai dengan kondisi
+        // includes (value) : boolean  ------> mengecek apakah terdapat data
+        // indexOf(value) : number    -----> mengecek posisi index data
+        // lastIndexOf(value) : number -----> mengecek posisi index data terakhir
+
+        const source = [1,2,3,4,5,6,7,8,9];
+
+        console.info(source.find(value => value > 3)) 
+        console.info(source.findIndex(value => value > 3))
+        console.info(source.includes(7))
+        console.info(source.indexOf(5))
+        console.info(source.lastIndexOf(5))
+
+        // Array Transform
+        // map (value => result) : Array<result>   -----> melakukan transform tiap value dan menghasilkan array result
+        // reduce (resultBefore, value => result) : result ---> melakukan transform dengan menggunakan value array dan value selanjutnya
+        // lalu hasilnya dilanjutkan ke iterasi selanjutnya
+        // reduceRight(resultBefore, value => result)  ---> sama seperti reduce(), namun dilakukan dari belakang
+
+        const names = "Tasya Dea Ardelia".split(" ");
+        console.info(names.map(value => value.toUpperCase()));
+
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+        console.info(numbers.reduce((result, value) => result + value));
+        console.info(numbers.reduceRight((result, value) => result + value));
+
+    </script>
+</body>
+</html>

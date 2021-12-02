@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // Object.freeze() -> untuk mengubah object menjadi object yang tidak bisa diubah atau dihapus attribute nya
+        // Object.seal() -> untuk mengubah object menjadi object yang tidak bisa dihapus attribute nya
+
+        // Object.assign(target, source) -> untuk menggabungkan attribute dari sebuah object ke object lain
+
+
+        const person = {
+            firstName: "Tasya",
+            lastName: "Dea"
+        };
+
+        Object.freeze(person);
+
+        person.firstName = "Diubah";
+        delete person.firstName;
+        console.info(person);
+
+
+        const target = {firstName: "Tasya"};
+        const source = {lastName: "Tambunan"};
+
+        Object.assign(target,source);
+        console.info(target);
+    </script>
+</body>
+</html>

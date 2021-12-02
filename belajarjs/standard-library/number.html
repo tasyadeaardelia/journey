@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<body>
+    <script>
+        // Number itu function untuk mengubah ke tipe data number
+        // kalau misalnya, gak bisa di konversi ke number, maka hasilnya akan jadi NaN
+        // NaN itu => not a number
+        
+        const input = "12345"
+        const number = Number(input);
+
+        console.info(number);
+
+        // output : 12345
+
+        // Number itu punya banyak static property, seperti
+        // Number.MIN_VALUE => mendapatkan number minimal
+        // Number.MAX_VALUE => mendapatkan number maksimal
+
+
+        console.info(Number.MIN_VALUE);
+        console.info(Number.MAX_VALUE);
+
+        // Kalau tadi, static property. sekarang static method seperti
+        // Number.isNaN(value) => untuk mengecek apakah value NaN atau bukan
+        // Number.isInteger(value) => untuk mengecek apakah value berupa integer atau bukan
+
+        const data = Number('12345')
+        console.info(Number.isInteger(data));
+        console.info(Number.isNaN(data));
+
+        // instance method pada number seperti :
+        // Number.toLocalString(locale) => mengubah number jadi string sesuai dengan locale
+        // Number.toString(radix) => mengubah number jadi string sesuai radix
+
+        const value = Number(12345);
+        console.info(value.toLocaleString("id-ID"))
+        console.info(value.toString(2));
+    </script>
+</body>
+</html>
